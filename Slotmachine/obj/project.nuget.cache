@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "suGXAekRGvyEfYHi8Zys8aXWEi/TO/dpxOVstVghRGHvgNIeD+OlPYRdGWvX0DwAtEVS2fmf9IILJrBb6jhhXA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Nick\\Documents\\FlatRedBallProjects\\Slotmachine\\Slotmachine\\Slotmachine.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nick\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,60 @@
+{
+  "UserEvents": {
+    "Nick": [
+      {
+        "NewName": "Components/Slot1",
+        "OldName": null,
+        "EventType": 0,
+        "Timestamp": "2021-03-19T16:00:17.4718767Z"
+      },
+      {
+        "NewName": "Components/Slot2",
+        "OldName": null,
+        "EventType": 0,
+        "Timestamp": "2021-03-19T16:00:22.231887Z"
+      },
+      {
+        "NewName": "Components/Slot3",
+        "OldName": null,
+        "EventType": 0,
+        "Timestamp": "2021-03-19T16:00:26.5079576Z"
+      },
+      {
+        "NewName": "Components/Slot1.SpriteInstance",
+        "OldName": null,
+        "EventType": 5,
+        "Timestamp": "2021-03-19T16:00:29.1078797Z"
+      },
+      {
+        "NewName": "Components/Slot2.SpriteInstance",
+        "OldName": null,
+        "EventType": 5,
+        "Timestamp": "2021-03-19T16:00:31.0909349Z"
+      },
+      {
+        "NewName": "Components/Slot3.SpriteInstance",
+        "OldName": null,
+        "EventType": 5,
+        "Timestamp": "2021-03-19T16:00:33.2052617Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Components/Slot1",
+        "EventType": 1,
+        "Timestamp": "2021-03-19T16:02:56.5859221Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Components/Slot2",
+        "EventType": 1,
+        "Timestamp": "2021-03-19T16:02:58.6793471Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Components/Slot3",
+        "EventType": 1,
+        "Timestamp": "2021-03-19T16:03:00.0895156Z"
+      }
+    ]
+  }
+}
