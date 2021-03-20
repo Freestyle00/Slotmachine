@@ -82,7 +82,7 @@ namespace Slotmachine.Entities
                 }
                 else if (CurrentState == VariableState.FRB_iconshowing)
                 {
-                    SpriteInstanceTexture = adiamond;
+                    SpriteInstanceTexture = FRB_icon;
                 }
                 else if (CurrentState == VariableState.somethingshowing)
                 {
@@ -440,7 +440,7 @@ namespace Slotmachine.Entities
             {
                 if (interpolationValue < 1)
                 {
-                    this.SpriteInstanceTexture = adiamond;
+                    this.SpriteInstanceTexture = FRB_icon;
                 }
             }
             else if (firstState == VariableState.somethingshowing)
@@ -486,7 +486,7 @@ namespace Slotmachine.Entities
             {
                 if (interpolationValue >= 1)
                 {
-                    this.SpriteInstanceTexture = adiamond;
+                    this.SpriteInstanceTexture = FRB_icon;
                 }
             }
             else if (secondState == VariableState.somethingshowing)
@@ -541,7 +541,7 @@ namespace Slotmachine.Entities
             else if (state == VariableState.FRB_iconshowing)
             {
                 {
-                    object throwaway = adiamond;
+                    object throwaway = FRB_icon;
                 }
             }
             else if (state == VariableState.somethingshowing)

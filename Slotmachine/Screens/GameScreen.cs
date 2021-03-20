@@ -18,17 +18,22 @@ namespace Slotmachine.Screens
 {
     public partial class GameScreen
     {
-
         void CustomInitialize()
         {
-            //var test = Slotmachine.Factories.ANIMATIONROLLINGFactory.CreateNew();
+            
 
         }
 
         void CustomActivity(bool firstTimeCalled)
         {
             ButtonChecker();
-
+            
+            GumRuntimes.TextRuntime pausetext = GameScreenGum.GetGraphicalUiElementByName("TextInstance") as GumRuntimes.TextRuntime;
+            pausetext.Text = Passonclass.credits.ToString();
+            if (Passonclass.credits < 0)
+            {
+                FlatRedBallServices.Game.Exit();
+            }
         }
 
         void CustomDestroy()
@@ -47,6 +52,7 @@ namespace Slotmachine.Screens
             if (Passonclass.ButtonClicked == true)
             {
                 Rollingstones();
+                Passonclass.credits--;
                 Passonclass.ButtonClicked = false;
             }
         }

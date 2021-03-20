@@ -78,6 +78,12 @@
         "OldName": null,
         "EventType": 5,
         "Timestamp": "2021-03-20T11:46:33.3426554Z"
+      },
+      {
+        "NewName": "Screens/ GameScreenGum.TextInstance",
+        "OldName": null,
+        "EventType": 5,
+        "Timestamp": "2021-03-20T21:32:20.7452118Z"
       }
     ]
   }

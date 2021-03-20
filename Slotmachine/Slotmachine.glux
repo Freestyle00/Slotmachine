@@ -251,7 +251,12 @@
             <InstructionSave>
               <Type>String</Type>
               <Member>SpriteInstanceTexture</Member>
-              <ValueAsString>adiamond</ValueAsString>
+              <ValueAsString>FRB_icon</ValueAsString>
+            </InstructionSave>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceAnimationChains</Member>
+              <ValueAsString>RollingSlotsforall</ValueAsString>
             </InstructionSave>
           </InstructionSaves>
           <Name>FRB_iconshowing</Name>
@@ -485,7 +490,7 @@
             <InstructionSave>
               <Type>String</Type>
               <Member>SpriteInstanceTexture</Member>
-              <ValueAsString>adiamond</ValueAsString>
+              <ValueAsString>FRB_icon</ValueAsString>
             </InstructionSave>
           </InstructionSaves>
           <Name>FRB_iconshowing</Name>

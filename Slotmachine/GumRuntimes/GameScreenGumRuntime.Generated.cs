@@ -31,6 +31,17 @@
                             ButtonInstance.Width = 131f;
                             ButtonInstance.X = 33f;
                             ButtonInstance.Y = 66f;
+                            TextInstance.Blue = 21;
+                            TextInstance.Green = 184;
+                            TextInstance.Height = 20f;
+                            TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            TextInstance.MaxLettersToShow = 3;
+                            TextInstance.Red = 232;
+                            TextInstance.Text = "10\n";
+                            TextInstance.UseFontSmoothing = false;
+                            TextInstance.Width = 24f;
+                            TextInstance.X = 162f;
+                            TextInstance.Y = 70f;
                             break;
                         case  VariableState.Click:
                             ButtonInstance.Rotation = 2f;
@@ -64,6 +75,34 @@
                 bool setButtonInstanceYSecondValue = false;
                 float ButtonInstanceYFirstValue= 0;
                 float ButtonInstanceYSecondValue= 0;
+                bool setTextInstanceBlueFirstValue = false;
+                bool setTextInstanceBlueSecondValue = false;
+                int TextInstanceBlueFirstValue= 0;
+                int TextInstanceBlueSecondValue= 0;
+                bool setTextInstanceGreenFirstValue = false;
+                bool setTextInstanceGreenSecondValue = false;
+                int TextInstanceGreenFirstValue= 0;
+                int TextInstanceGreenSecondValue= 0;
+                bool setTextInstanceHeightFirstValue = false;
+                bool setTextInstanceHeightSecondValue = false;
+                float TextInstanceHeightFirstValue= 0;
+                float TextInstanceHeightSecondValue= 0;
+                bool setTextInstanceRedFirstValue = false;
+                bool setTextInstanceRedSecondValue = false;
+                int TextInstanceRedFirstValue= 0;
+                int TextInstanceRedSecondValue= 0;
+                bool setTextInstanceWidthFirstValue = false;
+                bool setTextInstanceWidthSecondValue = false;
+                float TextInstanceWidthFirstValue= 0;
+                float TextInstanceWidthSecondValue= 0;
+                bool setTextInstanceXFirstValue = false;
+                bool setTextInstanceXSecondValue = false;
+                float TextInstanceXFirstValue= 0;
+                float TextInstanceXSecondValue= 0;
+                bool setTextInstanceYFirstValue = false;
+                bool setTextInstanceYSecondValue = false;
+                float TextInstanceYFirstValue= 0;
+                float TextInstanceYSecondValue= 0;
                 bool setButtonInstanceRotationFirstValue = false;
                 bool setButtonInstanceRotationSecondValue = false;
                 float ButtonInstanceRotationFirstValue= 0;
@@ -83,6 +122,36 @@
                         ButtonInstanceXFirstValue = 33f;
                         setButtonInstanceYFirstValue = true;
                         ButtonInstanceYFirstValue = 66f;
+                        setTextInstanceBlueFirstValue = true;
+                        TextInstanceBlueFirstValue = 21;
+                        setTextInstanceGreenFirstValue = true;
+                        TextInstanceGreenFirstValue = 184;
+                        setTextInstanceHeightFirstValue = true;
+                        TextInstanceHeightFirstValue = 20f;
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance.MaxLettersToShow = 3;
+                        }
+                        setTextInstanceRedFirstValue = true;
+                        TextInstanceRedFirstValue = 232;
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance.Text = "10\n";
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance.UseFontSmoothing = false;
+                        }
+                        setTextInstanceWidthFirstValue = true;
+                        TextInstanceWidthFirstValue = 24f;
+                        setTextInstanceXFirstValue = true;
+                        TextInstanceXFirstValue = 162f;
+                        setTextInstanceYFirstValue = true;
+                        TextInstanceYFirstValue = 70f;
                         break;
                     case  VariableState.Click:
                         setButtonInstanceRotationFirstValue = true;
@@ -104,6 +173,36 @@
                         ButtonInstanceXSecondValue = 33f;
                         setButtonInstanceYSecondValue = true;
                         ButtonInstanceYSecondValue = 66f;
+                        setTextInstanceBlueSecondValue = true;
+                        TextInstanceBlueSecondValue = 21;
+                        setTextInstanceGreenSecondValue = true;
+                        TextInstanceGreenSecondValue = 184;
+                        setTextInstanceHeightSecondValue = true;
+                        TextInstanceHeightSecondValue = 20f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance.MaxLettersToShow = 3;
+                        }
+                        setTextInstanceRedSecondValue = true;
+                        TextInstanceRedSecondValue = 232;
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance.Text = "10\n";
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance.UseFontSmoothing = false;
+                        }
+                        setTextInstanceWidthSecondValue = true;
+                        TextInstanceWidthSecondValue = 24f;
+                        setTextInstanceXSecondValue = true;
+                        TextInstanceXSecondValue = 162f;
+                        setTextInstanceYSecondValue = true;
+                        TextInstanceYSecondValue = 70f;
                         break;
                     case  VariableState.Click:
                         setButtonInstanceRotationSecondValue = true;
@@ -130,6 +229,34 @@
                 if (setButtonInstanceYFirstValue && setButtonInstanceYSecondValue)
                 {
                     ButtonInstance.Y = ButtonInstanceYFirstValue * (1 - interpolationValue) + ButtonInstanceYSecondValue * interpolationValue;
+                }
+                if (setTextInstanceBlueFirstValue && setTextInstanceBlueSecondValue)
+                {
+                    TextInstance.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(TextInstanceBlueFirstValue* (1 - interpolationValue) + TextInstanceBlueSecondValue * interpolationValue);
+                }
+                if (setTextInstanceGreenFirstValue && setTextInstanceGreenSecondValue)
+                {
+                    TextInstance.Green = FlatRedBall.Math.MathFunctions.RoundToInt(TextInstanceGreenFirstValue* (1 - interpolationValue) + TextInstanceGreenSecondValue * interpolationValue);
+                }
+                if (setTextInstanceHeightFirstValue && setTextInstanceHeightSecondValue)
+                {
+                    TextInstance.Height = TextInstanceHeightFirstValue * (1 - interpolationValue) + TextInstanceHeightSecondValue * interpolationValue;
+                }
+                if (setTextInstanceRedFirstValue && setTextInstanceRedSecondValue)
+                {
+                    TextInstance.Red = FlatRedBall.Math.MathFunctions.RoundToInt(TextInstanceRedFirstValue* (1 - interpolationValue) + TextInstanceRedSecondValue * interpolationValue);
+                }
+                if (setTextInstanceWidthFirstValue && setTextInstanceWidthSecondValue)
+                {
+                    TextInstance.Width = TextInstanceWidthFirstValue * (1 - interpolationValue) + TextInstanceWidthSecondValue * interpolationValue;
+                }
+                if (setTextInstanceXFirstValue && setTextInstanceXSecondValue)
+                {
+                    TextInstance.X = TextInstanceXFirstValue * (1 - interpolationValue) + TextInstanceXSecondValue * interpolationValue;
+                }
+                if (setTextInstanceYFirstValue && setTextInstanceYSecondValue)
+                {
+                    TextInstance.Y = TextInstanceYFirstValue * (1 - interpolationValue) + TextInstanceYSecondValue * interpolationValue;
                 }
                 if (setButtonInstanceRotationFirstValue && setButtonInstanceRotationSecondValue)
                 {
@@ -263,6 +390,94 @@
                             Value = ButtonInstance.Y
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Blue",
+                            Type = "int",
+                            Value = TextInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Green",
+                            Type = "int",
+                            Value = TextInstance.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Height",
+                            Type = "float",
+                            Value = TextInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = TextInstance.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.MaxLettersToShow",
+                            Type = "int?",
+                            Value = TextInstance.MaxLettersToShow
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Red",
+                            Type = "int",
+                            Value = TextInstance.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Text",
+                            Type = "string",
+                            Value = TextInstance.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.UseFontSmoothing",
+                            Type = "bool",
+                            Value = TextInstance.UseFontSmoothing
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Width",
+                            Type = "float",
+                            Value = TextInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.X",
+                            Type = "float",
+                            Value = TextInstance.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Y",
+                            Type = "float",
+                            Value = TextInstance.Y
+                        }
+                        );
                         break;
                     case  VariableState.Click:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -323,6 +538,94 @@
                             Value = ButtonInstance.Y + 66f
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Blue",
+                            Type = "int",
+                            Value = TextInstance.Blue + 21
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Green",
+                            Type = "int",
+                            Value = TextInstance.Green + 184
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Height",
+                            Type = "float",
+                            Value = TextInstance.Height + 20f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = TextInstance.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.MaxLettersToShow",
+                            Type = "int?",
+                            Value = TextInstance.MaxLettersToShow
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Red",
+                            Type = "int",
+                            Value = TextInstance.Red + 232
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Text",
+                            Type = "string",
+                            Value = TextInstance.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.UseFontSmoothing",
+                            Type = "bool",
+                            Value = TextInstance.UseFontSmoothing
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Width",
+                            Type = "float",
+                            Value = TextInstance.Width + 24f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.X",
+                            Type = "float",
+                            Value = TextInstance.X + 162f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Y",
+                            Type = "float",
+                            Value = TextInstance.Y + 70f
+                        }
+                        );
                         break;
                     case  VariableState.Click:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -354,6 +657,23 @@
             }
             private bool tryCreateFormsObject;
             public Slotmachine.GumRuntimes.DefaultForms.ButtonRuntime ButtonInstance { get; set; }
+            public Slotmachine.GumRuntimes.TextRuntime TextInstance { get; set; }
+            public string Credits
+            {
+                get
+                {
+                    return TextInstance.Text;
+                }
+                set
+                {
+                    if (TextInstance.Text != value)
+                    {
+                        TextInstance.Text = value;
+                        CreditsChanged?.Invoke(this, null);
+                    }
+                }
+            }
+            public event System.EventHandler CreditsChanged;
             public GameScreenGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -381,6 +701,7 @@
             private void AssignReferences () 
             {
                 ButtonInstance = this.GetGraphicalUiElementByName("ButtonInstance") as Slotmachine.GumRuntimes.DefaultForms.ButtonRuntime;
+                TextInstance = this.GetGraphicalUiElementByName("TextInstance") as Slotmachine.GumRuntimes.TextRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new Slotmachine.FormsControls.Screens.GameScreenGumForms(this);

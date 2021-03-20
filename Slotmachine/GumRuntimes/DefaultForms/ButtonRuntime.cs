@@ -16,6 +16,5 @@ namespace Slotmachine.GumRuntimes.DefaultForms
         {
             Slotmachine.Passonclass.ButtonClicked = true;
         }
-          
     }
 }
