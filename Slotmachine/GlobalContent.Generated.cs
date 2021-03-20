@@ -50,6 +50,8 @@ namespace Slotmachine
             #if DEBUG && WINDOWS
             InitializeFileWatch();
             #endif
+            // Added by GumPlugin becasue of the Show Mouse checkbox on the .gumx:
+            FlatRedBall.FlatRedBallServices.Game.IsMouseVisible = true;
         }
         public static void Reload (object whatToReload) 
         {

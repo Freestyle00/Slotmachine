@@ -36,12 +36,15 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
-                            NineSliceInstance.CurrentColorCategoryState = Slotmachine.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                            NineSliceInstance.CurrentColorCategoryState = Slotmachine.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Red;
                             TextInstance.CurrentColorCategoryState = Slotmachine.GumRuntimes.TextRuntime.ColorCategory.Gray;
                             Height = 48f;
                             Width = 256f;
+                            NineSliceInstance.Blue = 0;
+                            NineSliceInstance.Green = 0;
                             NineSliceInstance.Height = 0f;
                             NineSliceInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            NineSliceInstance.Red = 255;
                             NineSliceInstance.Width = 0f;
                             NineSliceInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             NineSliceInstance.X = 0f;
@@ -53,13 +56,14 @@
                             TextInstance.Height = 0f;
                             TextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            TextInstance.UseFontSmoothing = false;
                             TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             TextInstance.Width = 0f;
                             TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             TextInstance.X = 0f;
                             TextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                             TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            TextInstance.Y = 0f;
+                            TextInstance.Y = 10f;
                             TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             HighlightRectangle.Height = -6f;
@@ -180,14 +184,26 @@
                 bool setHighlightRectangleYSecondValue = false;
                 float HighlightRectangleYFirstValue= 0;
                 float HighlightRectangleYSecondValue= 0;
+                bool setNineSliceInstanceBlueFirstValue = false;
+                bool setNineSliceInstanceBlueSecondValue = false;
+                int NineSliceInstanceBlueFirstValue= 0;
+                int NineSliceInstanceBlueSecondValue= 0;
                 bool setNineSliceInstanceCurrentColorCategoryStateFirstValue = false;
                 bool setNineSliceInstanceCurrentColorCategoryStateSecondValue = false;
                 Slotmachine.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory NineSliceInstanceCurrentColorCategoryStateFirstValue= Slotmachine.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                 Slotmachine.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory NineSliceInstanceCurrentColorCategoryStateSecondValue= Slotmachine.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                bool setNineSliceInstanceGreenFirstValue = false;
+                bool setNineSliceInstanceGreenSecondValue = false;
+                int NineSliceInstanceGreenFirstValue= 0;
+                int NineSliceInstanceGreenSecondValue= 0;
                 bool setNineSliceInstanceHeightFirstValue = false;
                 bool setNineSliceInstanceHeightSecondValue = false;
                 float NineSliceInstanceHeightFirstValue= 0;
                 float NineSliceInstanceHeightSecondValue= 0;
+                bool setNineSliceInstanceRedFirstValue = false;
+                bool setNineSliceInstanceRedSecondValue = false;
+                int NineSliceInstanceRedFirstValue= 0;
+                int NineSliceInstanceRedSecondValue= 0;
                 bool setNineSliceInstanceWidthFirstValue = false;
                 bool setNineSliceInstanceWidthSecondValue = false;
                 float NineSliceInstanceWidthFirstValue= 0;
@@ -265,14 +281,20 @@
                         {
                             this.HighlightRectangle.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
+                        setNineSliceInstanceBlueFirstValue = true;
+                        NineSliceInstanceBlueFirstValue = 0;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = Slotmachine.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = Slotmachine.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Red;
+                        setNineSliceInstanceGreenFirstValue = true;
+                        NineSliceInstanceGreenFirstValue = 0;
                         setNineSliceInstanceHeightFirstValue = true;
                         NineSliceInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
                             this.NineSliceInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
+                        setNineSliceInstanceRedFirstValue = true;
+                        NineSliceInstanceRedFirstValue = 255;
                         setNineSliceInstanceWidthFirstValue = true;
                         NineSliceInstanceWidthFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -313,6 +335,10 @@
                         }
                         if (interpolationValue < 1)
                         {
+                            this.TextInstance.UseFontSmoothing = false;
+                        }
+                        if (interpolationValue < 1)
+                        {
                             this.TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
                         setTextInstanceWidthFirstValue = true;
@@ -332,7 +358,7 @@
                             this.TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         setTextInstanceYFirstValue = true;
-                        TextInstanceYFirstValue = 0f;
+                        TextInstanceYFirstValue = 10f;
                         if (interpolationValue < 1)
                         {
                             this.TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
@@ -386,14 +412,20 @@
                         {
                             this.HighlightRectangle.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
+                        setNineSliceInstanceBlueSecondValue = true;
+                        NineSliceInstanceBlueSecondValue = 0;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = Slotmachine.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = Slotmachine.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Red;
+                        setNineSliceInstanceGreenSecondValue = true;
+                        NineSliceInstanceGreenSecondValue = 0;
                         setNineSliceInstanceHeightSecondValue = true;
                         NineSliceInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
                             this.NineSliceInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
+                        setNineSliceInstanceRedSecondValue = true;
+                        NineSliceInstanceRedSecondValue = 255;
                         setNineSliceInstanceWidthSecondValue = true;
                         NineSliceInstanceWidthSecondValue = 0f;
                         if (interpolationValue >= 1)
@@ -434,6 +466,10 @@
                         }
                         if (interpolationValue >= 1)
                         {
+                            this.TextInstance.UseFontSmoothing = false;
+                        }
+                        if (interpolationValue >= 1)
+                        {
                             this.TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
                         setTextInstanceWidthSecondValue = true;
@@ -453,7 +489,7 @@
                             this.TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         setTextInstanceYSecondValue = true;
-                        TextInstanceYSecondValue = 0f;
+                        TextInstanceYSecondValue = 10f;
                         if (interpolationValue >= 1)
                         {
                             this.TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
@@ -491,13 +527,25 @@
                 {
                     HighlightRectangle.Y = HighlightRectangleYFirstValue * (1 - interpolationValue) + HighlightRectangleYSecondValue * interpolationValue;
                 }
+                if (setNineSliceInstanceBlueFirstValue && setNineSliceInstanceBlueSecondValue)
+                {
+                    NineSliceInstance.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(NineSliceInstanceBlueFirstValue* (1 - interpolationValue) + NineSliceInstanceBlueSecondValue * interpolationValue);
+                }
                 if (setNineSliceInstanceCurrentColorCategoryStateFirstValue && setNineSliceInstanceCurrentColorCategoryStateSecondValue)
                 {
                     NineSliceInstance.InterpolateBetween(NineSliceInstanceCurrentColorCategoryStateFirstValue, NineSliceInstanceCurrentColorCategoryStateSecondValue, interpolationValue);
                 }
+                if (setNineSliceInstanceGreenFirstValue && setNineSliceInstanceGreenSecondValue)
+                {
+                    NineSliceInstance.Green = FlatRedBall.Math.MathFunctions.RoundToInt(NineSliceInstanceGreenFirstValue* (1 - interpolationValue) + NineSliceInstanceGreenSecondValue * interpolationValue);
+                }
                 if (setNineSliceInstanceHeightFirstValue && setNineSliceInstanceHeightSecondValue)
                 {
                     NineSliceInstance.Height = NineSliceInstanceHeightFirstValue * (1 - interpolationValue) + NineSliceInstanceHeightSecondValue * interpolationValue;
+                }
+                if (setNineSliceInstanceRedFirstValue && setNineSliceInstanceRedSecondValue)
+                {
+                    NineSliceInstance.Red = FlatRedBall.Math.MathFunctions.RoundToInt(NineSliceInstanceRedFirstValue* (1 - interpolationValue) + NineSliceInstanceRedSecondValue * interpolationValue);
                 }
                 if (setNineSliceInstanceWidthFirstValue && setNineSliceInstanceWidthSecondValue)
                 {
@@ -992,9 +1040,25 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "NineSliceInstance.Blue",
+                            Type = "int",
+                            Value = NineSliceInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "NineSliceInstance.ColorCategoryState",
                             Type = "ColorCategoryState",
                             Value = NineSliceInstance.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Green",
+                            Type = "int",
+                            Value = NineSliceInstance.Green
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1011,6 +1075,14 @@
                             Name = "NineSliceInstance.Height Units",
                             Type = "DimensionUnitType",
                             Value = NineSliceInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Red",
+                            Type = "int",
+                            Value = NineSliceInstance.Red
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1107,6 +1179,14 @@
                             Name = "TextInstance.HorizontalAlignment",
                             Type = "HorizontalAlignment",
                             Value = TextInstance.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.UseFontSmoothing",
+                            Type = "bool",
+                            Value = TextInstance.UseFontSmoothing
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1298,9 +1378,25 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "NineSliceInstance.Blue",
+                            Type = "int",
+                            Value = NineSliceInstance.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "NineSliceInstance.ColorCategoryState",
                             Type = "ColorCategoryState",
                             Value = NineSliceInstance.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Green",
+                            Type = "int",
+                            Value = NineSliceInstance.Green + 0
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1317,6 +1413,14 @@
                             Name = "NineSliceInstance.Height Units",
                             Type = "DimensionUnitType",
                             Value = NineSliceInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Red",
+                            Type = "int",
+                            Value = NineSliceInstance.Red + 255
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1418,6 +1522,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "TextInstance.UseFontSmoothing",
+                            Type = "bool",
+                            Value = TextInstance.UseFontSmoothing
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "TextInstance.VerticalAlignment",
                             Type = "VerticalAlignment",
                             Value = TextInstance.VerticalAlignment
@@ -1468,7 +1580,7 @@
                             SetsValue = true,
                             Name = "TextInstance.Y",
                             Type = "float",
-                            Value = TextInstance.Y + 0f
+                            Value = TextInstance.Y + 10f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

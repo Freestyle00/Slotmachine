@@ -24,6 +24,95 @@
         </ReferencedFileSave>
       </ReferencedFiles>
       <IsHiddenInTreeView>false</IsHiddenInTreeView>
+      <NamedObjects>
+        <NamedObjectSave>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>X</Member>
+            <ValueAsFloat>-75</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>Y</Member>
+            <ValueAsFloat>25</ValueAsFloat>
+          </CustomProperty>
+          <Properties>
+            <PropertySave>
+              <Name>AssociateWithFactory</Name>
+              <ValueAsBool>true</ValueAsBool>
+            </PropertySave>
+            <PropertySave>
+              <Name>SourceType</Name>
+              <ValueAsObject xsi:type="SourceType">Entity</ValueAsObject>
+            </PropertySave>
+          </Properties>
+          <SourceType>Entity</SourceType>
+          <SourceFile>Entities/Slot1</SourceFile>
+          <SourceClassType>Entities\Slot1</SourceClassType>
+          <InstanceName>Slot1Instance</InstanceName>
+          <AttachToContainer>true</AttachToContainer>
+          <GenerateTimedEmit>true</GenerateTimedEmit>
+          <IndependentOfCamera>false</IndependentOfCamera>
+        </NamedObjectSave>
+        <NamedObjectSave>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>X</Member>
+            <ValueAsFloat>0</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>Y</Member>
+            <ValueAsFloat>25</ValueAsFloat>
+          </CustomProperty>
+          <Properties>
+            <PropertySave>
+              <Name>AssociateWithFactory</Name>
+              <ValueAsBool>true</ValueAsBool>
+            </PropertySave>
+            <PropertySave>
+              <Name>SourceType</Name>
+              <ValueAsObject xsi:type="SourceType">Entity</ValueAsObject>
+            </PropertySave>
+          </Properties>
+          <SourceType>Entity</SourceType>
+          <SourceFile>Entities/Slot2</SourceFile>
+          <SourceClassType>Entities\Slot2</SourceClassType>
+          <InstanceName>Slot2Instance</InstanceName>
+          <AttachToContainer>true</AttachToContainer>
+          <GenerateTimedEmit>true</GenerateTimedEmit>
+          <IndependentOfCamera>false</IndependentOfCamera>
+        </NamedObjectSave>
+        <NamedObjectSave>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>X</Member>
+            <ValueAsFloat>75</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>Y</Member>
+            <ValueAsFloat>25</ValueAsFloat>
+          </CustomProperty>
+          <Properties>
+            <PropertySave>
+              <Name>AssociateWithFactory</Name>
+              <ValueAsBool>true</ValueAsBool>
+            </PropertySave>
+            <PropertySave>
+              <Name>SourceType</Name>
+              <ValueAsObject xsi:type="SourceType">Entity</ValueAsObject>
+            </PropertySave>
+          </Properties>
+          <SourceType>Entity</SourceType>
+          <SourceFile>Entities/Slot3</SourceFile>
+          <SourceClassType>Entities\Slot3</SourceClassType>
+          <InstanceName>Slot3Instance</InstanceName>
+          <AttachToContainer>true</AttachToContainer>
+          <GenerateTimedEmit>true</GenerateTimedEmit>
+          <IndependentOfCamera>false</IndependentOfCamera>
+        </NamedObjectSave>
+      </NamedObjects>
       <Name>Screens\GameScreen</Name>
     </ScreenSave>
   </Screens>
@@ -51,6 +140,24 @@
           <Name>Entities/Slot1/something.png</Name>
           <IsSharedStatic>true</IsSharedStatic>
           <RuntimeType>Microsoft.Xna.Framework.Graphics.Texture2D</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
+        <ReferencedFileSave>
+          <Name>Entities/Slot1/Bariguess.png</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>Microsoft.Xna.Framework.Graphics.Texture2D</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
+        <ReferencedFileSave>
+          <Name>Entities/Slot1/adiamond.png</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>Microsoft.Xna.Framework.Graphics.Texture2D</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
+        <ReferencedFileSave>
+          <Name>Entities/Slot1/RollingSlotsforall.achx</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>FlatRedBall.Graphics.Animation.AnimationChainList</RuntimeType>
           <ProjectsToExcludeFrom />
         </ReferencedFileSave>
       </ReferencedFiles>
@@ -83,7 +190,113 @@
           </Properties>
           <Name>Z</Name>
         </CustomVariable>
+        <CustomVariable>
+          <Properties>
+            <PropertySave>
+              <Name>Type</Name>
+              <ValueAsString>Texture2D</ValueAsString>
+            </PropertySave>
+          </Properties>
+          <Name>SpriteInstanceTexture</Name>
+          <DefaultValue xsi:type="xsd:string">FRB_icon</DefaultValue>
+          <SourceObject>SpriteInstance</SourceObject>
+          <SourceObjectProperty>Texture</SourceObjectProperty>
+        </CustomVariable>
+        <CustomVariable>
+          <Properties>
+            <PropertySave>
+              <Name>Type</Name>
+              <ValueAsString>AnimationChainList</ValueAsString>
+            </PropertySave>
+          </Properties>
+          <Name>SpriteInstanceAnimationChains</Name>
+          <SourceObject>SpriteInstance</SourceObject>
+          <SourceObjectProperty>AnimationChains</SourceObjectProperty>
+        </CustomVariable>
+        <CustomVariable>
+          <Properties>
+            <PropertySave>
+              <Name>Type</Name>
+              <ValueAsString>string</ValueAsString>
+            </PropertySave>
+          </Properties>
+          <Name>SpriteInstanceCurrentChainName</Name>
+          <SourceObject>SpriteInstance</SourceObject>
+          <SourceObjectProperty>CurrentChainName</SourceObjectProperty>
+        </CustomVariable>
       </CustomVariables>
+      <States>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>Bariguess</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>abariguessshowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>adiamond</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>adiamondshowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>adiamond</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>FRB_iconshowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>something</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>somethingshowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>Veilstone_Corner_Moon_Stone</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>Veilstone_Corner_Moon_StoneShowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>&lt;NONE&gt;</ValueAsString>
+            </InstructionSave>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceAnimationChains</Member>
+              <ValueAsString>RollingSlotsforall</ValueAsString>
+            </InstructionSave>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceCurrentChainName</Member>
+              <ValueAsString>RollingSlots</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>ROLLING</Name>
+        </StateSave>
+      </States>
       <Properties>
         <PropertySave>
           <Name>InputDevice</Name>
@@ -94,8 +307,26 @@
         <NamedObjectSave>
           <CustomProperty>
             <Type>float</Type>
-            <Member>TextureScale</Member>
-            <ValueAsFloat>1</ValueAsFloat>
+            <Member>Height</Member>
+            <ValueAsFloat>50</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>Microsoft.Xna.Framework.Graphics.Texture2D</Type>
+            <Member>Texture</Member>
+            <ValueAsString>FRB_icon</ValueAsString>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>Width</Member>
+            <ValueAsFloat>50</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>string</Type>
+            <Member>CurrentChainName</Member>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>FlatRedBall.Graphics.Animation.AnimationChainList</Type>
+            <Member>AnimationChains</Member>
           </CustomProperty>
           <Properties>
             <PropertySave>
@@ -145,6 +376,24 @@
           <RuntimeType>Microsoft.Xna.Framework.Graphics.Texture2D</RuntimeType>
           <ProjectsToExcludeFrom />
         </ReferencedFileSave>
+        <ReferencedFileSave>
+          <Name>Entities/Slot2/Bariguess.png</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>Microsoft.Xna.Framework.Graphics.Texture2D</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
+        <ReferencedFileSave>
+          <Name>Entities/Slot2/adiamond.png</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>Microsoft.Xna.Framework.Graphics.Texture2D</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
+        <ReferencedFileSave>
+          <Name>Entities/Slot2/RollingSlotsforall.achx</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>FlatRedBall.Graphics.Animation.AnimationChainList</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
       </ReferencedFiles>
       <IsHiddenInTreeView>false</IsHiddenInTreeView>
       <CustomVariables>
@@ -175,7 +424,108 @@
           </Properties>
           <Name>Z</Name>
         </CustomVariable>
+        <CustomVariable>
+          <Properties>
+            <PropertySave>
+              <Name>Type</Name>
+              <ValueAsString>Texture2D</ValueAsString>
+            </PropertySave>
+          </Properties>
+          <Name>SpriteInstanceTexture</Name>
+          <DefaultValue xsi:type="xsd:string">FRB_icon</DefaultValue>
+          <SourceObject>SpriteInstance</SourceObject>
+          <SourceObjectProperty>Texture</SourceObjectProperty>
+        </CustomVariable>
+        <CustomVariable>
+          <Properties>
+            <PropertySave>
+              <Name>Type</Name>
+              <ValueAsString>AnimationChainList</ValueAsString>
+            </PropertySave>
+          </Properties>
+          <Name>SpriteInstanceAnimationChains</Name>
+          <SourceObject>SpriteInstance</SourceObject>
+          <SourceObjectProperty>AnimationChains</SourceObjectProperty>
+        </CustomVariable>
+        <CustomVariable>
+          <Properties>
+            <PropertySave>
+              <Name>Type</Name>
+              <ValueAsString>string</ValueAsString>
+            </PropertySave>
+          </Properties>
+          <Name>SpriteInstanceCurrentChainName</Name>
+          <SourceObject>SpriteInstance</SourceObject>
+          <SourceObjectProperty>CurrentChainName</SourceObjectProperty>
+        </CustomVariable>
       </CustomVariables>
+      <States>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>adiamond</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>adiamondshowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>Bariguess</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>abariguessshowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>adiamond</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>FRB_iconshowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>something</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>somethingshowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>Veilstone_Corner_Moon_Stone</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>Veilstone_Corner_Moon_StoneShowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceAnimationChains</Member>
+              <ValueAsString>RollingSlotsforall</ValueAsString>
+            </InstructionSave>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceCurrentChainName</Member>
+              <ValueAsString>RollingSlots</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>ROLLING</Name>
+        </StateSave>
+      </States>
       <Properties>
         <PropertySave>
           <Name>InputDevice</Name>
@@ -186,8 +536,18 @@
         <NamedObjectSave>
           <CustomProperty>
             <Type>float</Type>
-            <Member>TextureScale</Member>
-            <ValueAsFloat>1</ValueAsFloat>
+            <Member>Height</Member>
+            <ValueAsFloat>50</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>Microsoft.Xna.Framework.Graphics.Texture2D</Type>
+            <Member>Texture</Member>
+            <ValueAsString>FRB_icon</ValueAsString>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>Width</Member>
+            <ValueAsFloat>50</ValueAsFloat>
           </CustomProperty>
           <Properties>
             <PropertySave>
@@ -237,6 +597,24 @@
           <RuntimeType>Microsoft.Xna.Framework.Graphics.Texture2D</RuntimeType>
           <ProjectsToExcludeFrom />
         </ReferencedFileSave>
+        <ReferencedFileSave>
+          <Name>Entities/Slot3/Bariguess.png</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>Microsoft.Xna.Framework.Graphics.Texture2D</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
+        <ReferencedFileSave>
+          <Name>Entities/Slot3/adiamond.png</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>Microsoft.Xna.Framework.Graphics.Texture2D</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
+        <ReferencedFileSave>
+          <Name>Entities/Slot3/RollingSlotsforall.achx</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>FlatRedBall.Graphics.Animation.AnimationChainList</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
       </ReferencedFiles>
       <IsHiddenInTreeView>false</IsHiddenInTreeView>
       <CustomVariables>
@@ -267,7 +645,108 @@
           </Properties>
           <Name>Z</Name>
         </CustomVariable>
+        <CustomVariable>
+          <Properties>
+            <PropertySave>
+              <Name>Type</Name>
+              <ValueAsString>Texture2D</ValueAsString>
+            </PropertySave>
+          </Properties>
+          <Name>SpriteInstanceTexture</Name>
+          <DefaultValue xsi:type="xsd:string">FRB_icon</DefaultValue>
+          <SourceObject>SpriteInstance</SourceObject>
+          <SourceObjectProperty>Texture</SourceObjectProperty>
+        </CustomVariable>
+        <CustomVariable>
+          <Properties>
+            <PropertySave>
+              <Name>Type</Name>
+              <ValueAsString>AnimationChainList</ValueAsString>
+            </PropertySave>
+          </Properties>
+          <Name>SpriteInstanceAnimationChains</Name>
+          <SourceObject>SpriteInstance</SourceObject>
+          <SourceObjectProperty>AnimationChains</SourceObjectProperty>
+        </CustomVariable>
+        <CustomVariable>
+          <Properties>
+            <PropertySave>
+              <Name>Type</Name>
+              <ValueAsString>string</ValueAsString>
+            </PropertySave>
+          </Properties>
+          <Name>SpriteInstanceCurrentChainName</Name>
+          <SourceObject>SpriteInstance</SourceObject>
+          <SourceObjectProperty>CurrentChainName</SourceObjectProperty>
+        </CustomVariable>
       </CustomVariables>
+      <States>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>Bariguess</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>abariguessshowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>adiamond</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>adiamondshowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>FRB_icon</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>FRB_iconshowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>something</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>somethingshowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceTexture</Member>
+              <ValueAsString>Veilstone_Corner_Moon_Stone</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>Veilstone_Corner_Moon_StoneShowing</Name>
+        </StateSave>
+        <StateSave>
+          <InstructionSaves>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceAnimationChains</Member>
+              <ValueAsString>RollingSlotsforall</ValueAsString>
+            </InstructionSave>
+            <InstructionSave>
+              <Type>String</Type>
+              <Member>SpriteInstanceCurrentChainName</Member>
+              <ValueAsString>RollingSlots</ValueAsString>
+            </InstructionSave>
+          </InstructionSaves>
+          <Name>ROLLING</Name>
+        </StateSave>
+      </States>
       <Properties>
         <PropertySave>
           <Name>InputDevice</Name>
@@ -278,8 +757,18 @@
         <NamedObjectSave>
           <CustomProperty>
             <Type>float</Type>
-            <Member>TextureScale</Member>
-            <ValueAsFloat>1</ValueAsFloat>
+            <Member>Height</Member>
+            <ValueAsFloat>50</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>Microsoft.Xna.Framework.Graphics.Texture2D</Type>
+            <Member>Texture</Member>
+            <ValueAsString>FRB_icon</ValueAsString>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>Width</Member>
+            <ValueAsFloat>50</ValueAsFloat>
           </CustomProperty>
           <Properties>
             <PropertySave>
@@ -371,8 +860,8 @@
     <Name>Custom</Name>
     <Is2D>true</Is2D>
     <GenerateDisplayCode>true</GenerateDisplayCode>
-    <ResolutionWidth>400</ResolutionWidth>
-    <ResolutionHeight>400</ResolutionHeight>
+    <ResolutionWidth>200</ResolutionWidth>
+    <ResolutionHeight>100</ResolutionHeight>
     <FixedAspectRatio>false</FixedAspectRatio>
     <AspectRatioWidth>16</AspectRatioWidth>
     <AspectRatioHeight>9</AspectRatioHeight>

@@ -6,7 +6,8 @@
             #region State Enums
             public enum VariableState
             {
-                Default
+                Default,
+                Click
             }
             #endregion
             #region State Fields
@@ -25,6 +26,14 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
+                            ButtonInstance.Height = 28f;
+                            ButtonInstance.Text = "ROLL\n";
+                            ButtonInstance.Width = 131f;
+                            ButtonInstance.X = 33f;
+                            ButtonInstance.Y = 66f;
+                            break;
+                        case  VariableState.Click:
+                            ButtonInstance.Rotation = 2f;
                             break;
                     }
                 }
@@ -39,20 +48,92 @@
                     throw new System.Exception("interpolationValue cannot be NaN");
                 }
                 #endif
+                bool setButtonInstanceHeightFirstValue = false;
+                bool setButtonInstanceHeightSecondValue = false;
+                float ButtonInstanceHeightFirstValue= 0;
+                float ButtonInstanceHeightSecondValue= 0;
+                bool setButtonInstanceWidthFirstValue = false;
+                bool setButtonInstanceWidthSecondValue = false;
+                float ButtonInstanceWidthFirstValue= 0;
+                float ButtonInstanceWidthSecondValue= 0;
+                bool setButtonInstanceXFirstValue = false;
+                bool setButtonInstanceXSecondValue = false;
+                float ButtonInstanceXFirstValue= 0;
+                float ButtonInstanceXSecondValue= 0;
+                bool setButtonInstanceYFirstValue = false;
+                bool setButtonInstanceYSecondValue = false;
+                float ButtonInstanceYFirstValue= 0;
+                float ButtonInstanceYSecondValue= 0;
+                bool setButtonInstanceRotationFirstValue = false;
+                bool setButtonInstanceRotationSecondValue = false;
+                float ButtonInstanceRotationFirstValue= 0;
+                float ButtonInstanceRotationSecondValue= 0;
                 switch(firstState)
                 {
                     case  VariableState.Default:
+                        setButtonInstanceHeightFirstValue = true;
+                        ButtonInstanceHeightFirstValue = 28f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ButtonInstance.Text = "ROLL\n";
+                        }
+                        setButtonInstanceWidthFirstValue = true;
+                        ButtonInstanceWidthFirstValue = 131f;
+                        setButtonInstanceXFirstValue = true;
+                        ButtonInstanceXFirstValue = 33f;
+                        setButtonInstanceYFirstValue = true;
+                        ButtonInstanceYFirstValue = 66f;
+                        break;
+                    case  VariableState.Click:
+                        setButtonInstanceRotationFirstValue = true;
+                        ButtonInstanceRotationFirstValue = 2f;
                         break;
                 }
                 switch(secondState)
                 {
                     case  VariableState.Default:
+                        setButtonInstanceHeightSecondValue = true;
+                        ButtonInstanceHeightSecondValue = 28f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ButtonInstance.Text = "ROLL\n";
+                        }
+                        setButtonInstanceWidthSecondValue = true;
+                        ButtonInstanceWidthSecondValue = 131f;
+                        setButtonInstanceXSecondValue = true;
+                        ButtonInstanceXSecondValue = 33f;
+                        setButtonInstanceYSecondValue = true;
+                        ButtonInstanceYSecondValue = 66f;
+                        break;
+                    case  VariableState.Click:
+                        setButtonInstanceRotationSecondValue = true;
+                        ButtonInstanceRotationSecondValue = 2f;
                         break;
                 }
                 var wasSuppressed = mIsLayoutSuspended;
                 if (wasSuppressed == false)
                 {
                     SuspendLayout(true);
+                }
+                if (setButtonInstanceHeightFirstValue && setButtonInstanceHeightSecondValue)
+                {
+                    ButtonInstance.Height = ButtonInstanceHeightFirstValue * (1 - interpolationValue) + ButtonInstanceHeightSecondValue * interpolationValue;
+                }
+                if (setButtonInstanceWidthFirstValue && setButtonInstanceWidthSecondValue)
+                {
+                    ButtonInstance.Width = ButtonInstanceWidthFirstValue * (1 - interpolationValue) + ButtonInstanceWidthSecondValue * interpolationValue;
+                }
+                if (setButtonInstanceXFirstValue && setButtonInstanceXSecondValue)
+                {
+                    ButtonInstance.X = ButtonInstanceXFirstValue * (1 - interpolationValue) + ButtonInstanceXSecondValue * interpolationValue;
+                }
+                if (setButtonInstanceYFirstValue && setButtonInstanceYSecondValue)
+                {
+                    ButtonInstance.Y = ButtonInstanceYFirstValue * (1 - interpolationValue) + ButtonInstanceYSecondValue * interpolationValue;
+                }
+                if (setButtonInstanceRotationFirstValue && setButtonInstanceRotationSecondValue)
+                {
+                    ButtonInstance.Rotation = ButtonInstanceRotationFirstValue * (1 - interpolationValue) + ButtonInstanceRotationSecondValue * interpolationValue;
                 }
                 if (interpolationValue < 1)
                 {
@@ -129,6 +210,7 @@
             public override void StopAnimations () 
             {
                 base.StopAnimations();
+                ButtonInstance.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -141,6 +223,56 @@
                 switch(state)
                 {
                     case  VariableState.Default:
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Height",
+                            Type = "float",
+                            Value = ButtonInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Text",
+                            Type = "string",
+                            Value = ButtonInstance.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Width",
+                            Type = "float",
+                            Value = ButtonInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.X",
+                            Type = "float",
+                            Value = ButtonInstance.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Y",
+                            Type = "float",
+                            Value = ButtonInstance.Y
+                        }
+                        );
+                        break;
+                    case  VariableState.Click:
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Rotation",
+                            Type = "float",
+                            Value = ButtonInstance.Rotation
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -151,6 +283,56 @@
                 switch(state)
                 {
                     case  VariableState.Default:
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Height",
+                            Type = "float",
+                            Value = ButtonInstance.Height + 28f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Text",
+                            Type = "string",
+                            Value = ButtonInstance.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Width",
+                            Type = "float",
+                            Value = ButtonInstance.Width + 131f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.X",
+                            Type = "float",
+                            Value = ButtonInstance.X + 33f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Y",
+                            Type = "float",
+                            Value = ButtonInstance.Y + 66f
+                        }
+                        );
+                        break;
+                    case  VariableState.Click:
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Rotation",
+                            Type = "float",
+                            Value = ButtonInstance.Rotation + 2f
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -165,11 +347,13 @@
                     if (category == null)
                     {
                         if (state.Name == "Default") this.mCurrentVariableState = VariableState.Default;
+                        if (state.Name == "Click") this.mCurrentVariableState = VariableState.Click;
                     }
                 }
                 base.ApplyState(state);
             }
             private bool tryCreateFormsObject;
+            public Slotmachine.GumRuntimes.DefaultForms.ButtonRuntime ButtonInstance { get; set; }
             public GameScreenGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -196,6 +380,7 @@
             }
             private void AssignReferences () 
             {
+                ButtonInstance = this.GetGraphicalUiElementByName("ButtonInstance") as Slotmachine.GumRuntimes.DefaultForms.ButtonRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new Slotmachine.FormsControls.Screens.GameScreenGumForms(this);

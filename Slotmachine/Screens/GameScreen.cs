@@ -21,13 +21,13 @@ namespace Slotmachine.Screens
 
         void CustomInitialize()
         {
-
+            //var test = Slotmachine.Factories.ANIMATIONROLLINGFactory.CreateNew();
 
         }
 
         void CustomActivity(bool firstTimeCalled)
         {
-
+            ButtonChecker();
 
         }
 
@@ -42,6 +42,20 @@ namespace Slotmachine.Screens
 
 
         }
-
+        void ButtonChecker()
+        {
+            if (Passonclass.ButtonClicked == true)
+            {
+                Rollingstones();
+                Passonclass.ButtonClicked = false;
+            }
+        }
+        void Rollingstones() //i couldnt resist
+        {
+            Slot1Instance.InterpolateToState(Slotmachine.Entities.Slot1.VariableState.ROLLING, 1);
+            Slot2Instance.InterpolateToState(Slotmachine.Entities.Slot2.VariableState.ROLLING, 1);
+            Slot3Instance.InterpolateToState(Slotmachine.Entities.Slot3.VariableState.ROLLING, 1);
+            //Console.WriteLine("SUCCES");
+        }
     }
 }
